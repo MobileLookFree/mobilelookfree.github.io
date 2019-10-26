@@ -17,6 +17,7 @@ const styles = () => ({
     fontWeight: '600',
     cursor: 'pointer',
     outline: 'none',  
+    border: 'none',
     WebkitTapHighlightColor: 'rgba(0,0,0,0)',
     transition: '0.5s',
     '&:hover': {
