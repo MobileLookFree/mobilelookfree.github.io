@@ -14,6 +14,7 @@ const styles = {
   '@media (pointer: coarse) and (hover: none)': {
     colorField: {
       width: '100%',
+      transform: 'none !important',
     },
   },
 };

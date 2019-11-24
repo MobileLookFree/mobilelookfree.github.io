@@ -7,7 +7,7 @@ import ColorField from '../ui/colorField';
 class App extends React.PureComponent {
   state = {
     darkTheme: false,
-    coordinateX: 1,
+    coordinateX: 0,
   };
 
   componentDidMount() {
