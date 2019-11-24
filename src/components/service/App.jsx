@@ -28,7 +28,7 @@ class App extends React.PureComponent {
   };
 
   moveGradient = (event) => {
-    this.setState({ coordinateX: event.screenX });
+    this.setState({ coordinateX: event.pageX });
   };
 
   render() {

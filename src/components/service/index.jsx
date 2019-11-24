@@ -7,6 +7,7 @@ const styles = {
       margin: 0,
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
       transition: 'background 1000ms',
+      WebkitTransform: 'translate3d(0, 0, 0)',
     },
   },
   wrapper: {
