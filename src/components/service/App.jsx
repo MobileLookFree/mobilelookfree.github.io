@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '../ui/button';
 import Title from '../ui/title';
 import ColorField from '../ui/colorField';
+import Link from '../ui/Link';
 
 class App extends React.PureComponent {
   state = {
@@ -45,6 +46,7 @@ class App extends React.PureComponent {
         />
         <Title darkTheme={darkTheme} />
         <Button darkTheme={darkTheme} selectTheme={this.selectTheme} />
+        <Link href="https://yandex.ru">Клик</Link>
       </div>
     );
   }
