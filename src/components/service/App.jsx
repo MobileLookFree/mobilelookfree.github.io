@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Button from '../ui/button';
 import Title from '../ui/title';
 import ColorField from '../ui/colorField';
-import Link from '../ui/Link';
+import SuperLink from '../ui/SuperLink';
 
 class App extends React.PureComponent {
   state = {
@@ -46,14 +45,10 @@ class App extends React.PureComponent {
         />
         <Title darkTheme={darkTheme} />
         <Button darkTheme={darkTheme} selectTheme={this.selectTheme} />
-        <Link href="https://yandex.ru">Клик</Link>
+        <SuperLink href={2}>Клик</SuperLink>
       </div>
     );
   }
 }
-
-App.propTypes = {
-  classes: PropTypes.shape().isRequired,
-};
 
 export default App;
