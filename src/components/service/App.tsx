@@ -1,14 +1,12 @@
 import React, { FC } from 'react';
-import { useTheme } from '../../hooks/useTheme';
-import { useToggle } from '../../hooks/useToggle';
-import Link from '../ui/Link';
-import ButtonRound from '../ui/ButtonRound';
+import { useTheme } from 'hooks/useTheme';
+import { useToggle } from 'hooks/useToggle';
+import Link from 'components/ui/Link';
+import ButtonRound from 'components/ui/ButtonRound';
 
 const App: FC = () => {
   const [theme] = useTheme();
   const [, toggleValue] = useToggle<boolean>(true, false);
-
-  // console.log(value);
 
   return (
     <>
@@ -21,7 +19,13 @@ const App: FC = () => {
         </Link>
       </div>
       <ButtonRound>
-        Click
+        1
+      </ButtonRound>
+      <ButtonRound>
+        2
+      </ButtonRound>
+      <ButtonRound>
+        3
       </ButtonRound>
     </>
   );

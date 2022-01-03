@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 // styles
@@ -35,21 +35,6 @@ function Link<T>(props: LinkProps<T>) {
 
 Link.defaultProps = {
   color: 'blue',
-};
-
-interface IClass {
-  child: React.ReactChild;
-}
-
-export class Test extends PureComponent<IClass>{
-  getNumber = (num: number): 1 | 0 => {
-    return num > 2 ? 1 : 0;
-  }
-
-  render(): React.ReactNode {
-    const { child } = this.props;
-      return child;
-  }
 };
 
 export default Link;

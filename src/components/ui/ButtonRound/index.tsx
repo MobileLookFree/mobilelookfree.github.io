@@ -1,9 +1,8 @@
 import React, { FC, useState, useEffect } from 'react';
 import { Styled } from './style';
-import { Colors } from '../../../assets/colors';
+import { Colors } from 'assets/Colors';
 
 interface ButtonRoundProps {
-  pressed?: boolean;
   onClick?: (event: React.MouseEvent) => void;
 };
 
