@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 // styles
@@ -11,24 +11,45 @@ const StyledLink = styled.a`
   }
 `;
 
-interface LinkProps {
-  children: React.ReactNode;
-  color?: string;
+export enum Colors {
+  red = 'red',
+  blue = 'blue'
+};
+
+interface LinkProps<T> {
+  children?: React.ReactNode;
+  color?: Colors;
+  width?: T;
+  height?: T;
   href: string;
 }
 
-const Link: React.FC<LinkProps> = React.memo((
-  { children, color, href }) => (
-    <StyledLink
-      href={href}
-      color={color}
-    >
+function Link<T>(props: LinkProps<T>) {
+  const { children, ...others} = props;
+  return (
+    <StyledLink {...others}>
       {children}
     </StyledLink>
-  ));
+  );
+};
 
 Link.defaultProps = {
   color: 'blue',
+};
+
+interface IClass {
+  child: React.ReactChild;
+}
+
+export class Test extends PureComponent<IClass>{
+  getNumber = (num: number): 1 | 0 => {
+    return num > 2 ? 1 : 0;
+  }
+
+  render(): React.ReactNode {
+    const { child } = this.props;
+      return child;
+  }
 };
 
 export default Link;
