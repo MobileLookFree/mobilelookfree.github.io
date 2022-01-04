@@ -13,7 +13,7 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin({})]
   },
   output: {
-    path: path.join(__dirname, './build'),
+    path: path.join(__dirname, '../build'),
   },
   module: {
     rules: [
