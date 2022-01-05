@@ -4,6 +4,8 @@ import { useToggle } from 'hooks/useToggle';
 import Link from 'components/ui/Link';
 import ButtonRound from 'components/ui/ButtonRound';
 
+import styles from './app.module.css';
+
 const App: FC = () => {
   const [theme] = useTheme();
   const [, toggleValue] = useToggle<boolean>(true, false);
@@ -11,6 +13,7 @@ const App: FC = () => {
   return (
     <>
       <div
+        className={styles.app}
         style={{ background: theme === 'dark' ? 'black' : 'white' }}
         onClick={toggleValue}
       >

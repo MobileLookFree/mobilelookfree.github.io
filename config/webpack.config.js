@@ -1,4 +1,5 @@
 const path = require('path');
+const open = require('open');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -33,7 +34,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          prod ? MiniCssExtractPlugin.loader : "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              importLoaders: 1,
+              sourceMap: true,
+            }
+          }
+        ]
       },
     ]
   },
@@ -48,6 +59,11 @@ module.exports = {
     port: 3000,
     compress: true,
     hot: true,
+    open: {
+      app: {
+        name: open.apps.chrome,
+      },
+    }
   },
   stats: 'errors-warnings',
 };
