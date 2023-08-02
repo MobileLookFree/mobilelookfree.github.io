@@ -8,5 +8,5 @@ export function useToggle<T = boolean>(first: T, second: T) {
     : first
   );
 
-  return [value, onToggle, setValue] as const;
+  return [value, onToggle, setValue];
 };

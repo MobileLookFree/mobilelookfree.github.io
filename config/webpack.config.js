@@ -21,23 +21,26 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
-            ],
+        use: [
+          'babel-loader',
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react',
+                '@babel/preset-typescript',
+              ],
+            },
           },
-        },
+          'eslint-loader'],
       },
       {
         test: /\.(css|scss)$/,
         use: [
-          prod ? MiniCssExtractPlugin.loader : "style-loader",
+          prod ? MiniCssExtractPlugin.loader : 'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,

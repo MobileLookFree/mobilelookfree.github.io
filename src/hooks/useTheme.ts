@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 export const useTheme = (defTheme: 'light' | 'dark' = 'light') => {
   const [theme, setTheme] = useState<'light' | 'dark'>(defTheme);
@@ -11,5 +11,5 @@ export const useTheme = (defTheme: 'light' | 'dark' = 'light') => {
     tmq && tmq.addEventListener('change', onThemeEvent);
   }, [setTheme]);
 
-  return [theme, setTheme] as const;
+  return [theme, setTheme];
 };

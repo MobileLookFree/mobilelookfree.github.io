@@ -12,8 +12,8 @@ const StyledLink = styled.a`
 `;
 
 export enum Colors {
-  red = 'red',
-  blue = 'blue'
+  Red = 'red',
+  Blue = 'blue'
 };
 
 interface LinkProps<T> {

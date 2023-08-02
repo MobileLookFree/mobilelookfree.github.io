@@ -17,14 +17,14 @@ const App: FC = () => {
     width: 200,
     height: 200,
   });
-  const [ref, setRef] = useState<HTMLDivElement>();
+  const [ref, setRef] = useState<HTMLDivElement|null>(null);
 
   return (
     <>
       <div
         className={styles.app}
         style={{ background: theme === 'dark' ? 'black' : 'white' }}
-        onClick={toggleValue}
+        onClick={() => toggleValue()}
       >
         <Link href='https://yandex.ru'>
           Клик
@@ -56,7 +56,7 @@ const App: FC = () => {
               top: pageY - shiftY,
               left: pageX - shiftX,
             });
-          }
+          };
         }}
         onMouseUp={() => {
           if (!ref) {

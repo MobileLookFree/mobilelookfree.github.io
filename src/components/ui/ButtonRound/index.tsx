@@ -22,8 +22,8 @@ const ButtonRound: FC<ButtonRoundProps> = ({ children, onClick }) => {
     <Styled
       className='app-ui-round-button'
       color='white'
-      bColor={Colors.purple}
-      pressedBColor={Colors.purpleDark}
+      bColor={Colors.Purple}
+      pressedBColor={Colors.PurpleDark}
       pressed={pressed}
       onClick={onClickHandler}
     >
